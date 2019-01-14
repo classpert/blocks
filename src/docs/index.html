@@ -1,0 +1,30 @@
+<% var data = htmlWebpackPlugin.options.data %>
+
+<html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel='stylesheet' type='text/css' href='http://assets.quero.com/elements/dist/elements.bundle.css'>
+  </head>
+
+  <body style='margin:0;padding:10px;background-color:#FFF;'>
+
+    <script type='x-vue-template' id='searchbar'>
+      <search-bar :hidden-inputs='{ locale: "en" }'>
+        <button slot='search-btn' style='vertical-align:top' class='btn btn--blue-flat'>
+          Search
+        </button>
+      </search-bar>
+    </script>
+
+    <div data-vue-cpt='searchbar'></div>
+
+    <script type="text/javascript" src="blocks.cement.js"></script>
+    <script type="text/javascript" src="blocks/vue-search-bar.js"></script>
+    <script type="text/javascript" src="blocks/vue-awesome-swiper.js"></script>
+    <script type="text/javascript" src="blocks/vue-local-dropdown.js"></script>
+
+  </body>
+
+</html>
