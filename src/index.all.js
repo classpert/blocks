@@ -1,5 +1,5 @@
 import Vue from 'vue/dist/vue.js'
-require('./config/dom-listener')
+import Mounter from './config/dom-listener'
 
 // Vendor
 import VueAwesomeSwiper from 'vue-awesome-swiper'
@@ -20,3 +20,5 @@ Vue.use(VueAwesomeSwiper, {
   freeModeMomentumVelocityRatio: 0.75,
   spaceBetween: 20
 })
+
+Mounter()
