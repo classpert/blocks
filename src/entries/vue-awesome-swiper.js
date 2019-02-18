@@ -6,6 +6,8 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 
 Vue.use(VueAwesomeSwiper, { 
+  preventClicks: false,
+  preventClicksPropagation: false,
   autoHeight: true,
   slidesPerView: 1.25,
   freeMode: true,
