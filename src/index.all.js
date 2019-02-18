@@ -13,6 +13,8 @@ Vue.component('search-bar', SearchBar)
 Vue.component('locale-dropdown', LocaleDropdown)
 
 Vue.use(VueAwesomeSwiper, { 
+  preventClicks: false,
+  preventClicksPropagation: false,
   autoHeight: true,
   slidesPerView: 1.25,
   freeMode: true,
