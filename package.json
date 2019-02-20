@@ -52,5 +52,9 @@
     "last 1 version",
     "> 1%"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "add": "^2.0.6",
+    "vue-social-sharing": "^2.4.1",
+    "yarn": "^1.13.0"
+  }
 }

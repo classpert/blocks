@@ -4,6 +4,8 @@ import Mounter from './config/dom-listener'
 // Vendor
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
+const SocialSharing = require('vue-social-sharing');
+Vue.use(SocialSharing);
 
 // Components
 import SearchBar from './vue/SearchBar.vue'
