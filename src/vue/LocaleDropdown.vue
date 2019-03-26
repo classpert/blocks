@@ -2,7 +2,6 @@
   <form ref='form' @change='submit' method='GET' class='lang-dropdown'>
     <select v-model='locale' name='locale'>
       <option value='en'>EN</option>
-      <option value='es'>ES</option>
       <option value='pt-BR'>PT</option>
     </select>
   </form>
