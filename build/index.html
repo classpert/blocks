@@ -5,22 +5,48 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel='stylesheet' type='text/css' href='http://cdn.quero.com/elements/dist/elements.bundle.css'>
-    <script type='text/javascript' src='http://cdn.quero.com/elements/dist/elements.bundle.js'></script>
+    <link rel='stylesheet' type='text/css' href='http://localhost:8080/dist/elements.bundle.css'>
+    <link rel='stylesheet' type='text/css' href='http://localhost:8080/icon-font.css'>
   </head>
 
   <body style='margin:0;padding:10px;background-color:#FFF;'>
 
-    <script type='x-vue-template' id='searchbar'>
-      <search-bar :hidden-inputs='{ locale: "en" }'>
-        <button slot='search-btn' style='vertical-align:top' class='btn btn--blue-flat'>
-          Search
-        </button>
+    <script type='x-vue-template' id='search-bar-1'>
+      <search-bar placeholder='Find a course' :css-classes='{container: "c-search-slim c-search-slim--negative", form: "c-search-slim__form", input: "c-search-slim__input"}' :hidden-inputs='{ locale: "en" }'>
+        <span slot='icon' class='c-search-slim__icon'></span>
       </search-bar>
     </script>
 
     <h2>Search Bar</h2>
-    <div data-vue-cpt='searchbar'></div>
+
+    <div style='background-color:#0C4977;padding:10px;max-width:320px'>
+      <div data-vue-cpt='search-bar-1'></div>
+    </div>
+
+    <script type='x-vue-template' id='search-bar-2'>
+      <search-bar :css-classes='{container: "c-search-slim", form: "c-search-slim__form", input: "c-search-slim__input"}' :hidden-inputs='{ locale: "en" }'>
+        <span slot='icon' class='c-search-slim__icon'></span>
+      </search-bar>
+    </script>
+
+    <h2>Search Bar</h2>
+
+    <div style='padding:10px;max-width:320px'>
+      <div data-vue-cpt='search-bar-2'></div>
+    </div>
+
+    <script type='x-vue-template' id='search-bar-3'>
+      <search-bar :css-classes='{container: "c-search-impact", form: "c-search-impact__form", input: "c-search-impact__input"}' :hidden-inputs='{ locale: "en" }'>
+        <button slot='search-btn' class='c-search-impact__btn'></button>
+      </search-bar>
+    </script>
+
+    <h2>Search Bar</h2>
+
+    <div style='background-color:#0c4977;padding:10px;max-width:620px'>
+      <div data-vue-cpt='search-bar-3'></div>
+    </div>
+
 
     <script type='x-vue-template' id='social-sharing'>
        <social-sharing url="https://quero.com/"
