@@ -1,10 +1,13 @@
 import Vue from 'vue/dist/vue.js'
 
+let vms = {}
+
 const Mounter = () => {
   document.addEventListener('DOMContentLoaded', () => {
     let nodes = document.querySelectorAll('[data-vue-cpt]')
 
     for(let i = 0; i < nodes.length; ++i) {
+      let vm        = {}
       let node      = nodes[i]
       let data      = {}
       let cptName   = node.attributes['data-vue-cpt'].value
@@ -24,10 +27,12 @@ const Mounter = () => {
       if (Object.keys(data).length) {
         vueConfig.data = data
       }
-      new Vue(vueConfig)
+      vms[cptName] = new Vue(vueConfig)
     }
 
   });
 }
+
+window.__vms__ = vms
 
 export default Mounter
