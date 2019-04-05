@@ -13,7 +13,7 @@ const Mounter = () => {
         template: document.getElementById(node.getAttribute('data-vue-cpt')).innerHTML
       }
 
-      let props = document.querySelectorAll(`script[for="${cptName}"]`)
+      let props = document.querySelectorAll(`script[type="x-json-template"][for="${cptName}"]`)
 
       for (let j = 0; j < props.length; j++){
         let propNode   = props[j]
