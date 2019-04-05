@@ -10,8 +10,11 @@ ENV = development
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-bootstrap: .env docker-compose.yml
+bootstrap: .env docker-compose.yml install
 	@docker-compose run --service-ports yarn dev
+
+install:
+	@docker-compose run yarn install
 
 dev: ## Run webpack-dev-server
 	@docker-compose run --service-ports yarn dev
