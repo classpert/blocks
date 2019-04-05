@@ -27,7 +27,7 @@ module.exports = envVars => {
       'dist/blocks/vue-awesome-swiper': './src/entries/vue-awesome-swiper.js',
       'dist/blocks/vue-search-bar': './src/entries/vue-search-bar.js',
       'dist/blocks/vue-local-dropdown': './src/entries/vue-local-dropdown.js',
-      'dist/blocks/vue-syllabus-modal': './src/entries/vue-syllabus-modal.js'
+      'dist/blocks/vue-syllabus': './src/entries/vue-syllabus.js'
     },
 
     output: {

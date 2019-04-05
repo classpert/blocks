@@ -2,7 +2,7 @@ import Vue from 'vue/dist/vue.js'
 import Mounter from '../config/dom-listener'
 
 // Components
-import SyllabusModal from '../vue/SyllabusModal.vue'
-Vue.component('syllabus-modal', SyllabusModal)
+import Syllabus from '../vue/Syllabus.vue'
+Vue.component('syllabus', Syllabus)
 
 Mounter()

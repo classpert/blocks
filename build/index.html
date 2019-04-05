@@ -91,33 +91,33 @@
       <div data-vue-cpt='social-sharing'></div>
     </div>
 
-    <script type='x-json-template' name="course" for="syllabus-modal">
+    <script type='x-json-template' name="course" for="syllabus">
       {
         "name": "Python,Python for Beginners Python Real time examples Python",
         "description": "python 3, python programming, python , python beginners, python3, python 3, complete python 3, Real time examples python",
         "syllabus": "<ul>\n<li>You need to practice and apply same concept to your examples then only you know what you had learn from this</li>\n<li>This is completely good for beginners, You can easily understand the concepts and examples</li>\n<li><strong><em>IF you need any other topics also which is related to Course</em></strong> you can ask me i will update it as soon as possible ****</li>\n</ul>\n",
         "providerName": "Udemy",
-        "providerLogo": "http://localhost:8080/dist/svgs/providers-lib.svg#udemy"
+        "providerLogo": "http://cdn.quero.com/elements/dist/svgs/providers-lib.svg#udemy"
       }
     </script>
 
-    <script type='x-json-template' name="cssClasses" for="syllabus-modal">
+    <script type='x-json-template' name="cssClasses" for="syllabus">
       {
-        "rootClass": ["o-syllabus-modal"],
-        "callerClass": ["o-syllabus-modal__caller"],
-        "wrapperClass": ["o-syllabus-modal__wrapper"],
-        "dismisserClass": ["o-syllabus-modal__dismisser"],
-        "bodyClass": ["o-syllabus-modal__body"]
+        "rootClass": ["o-syllabus"],
+        "callerClass": ["o-syllabus__caller"],
+        "wrapperClass": ["o-syllabus__wrapper"],
+        "dismisserClass": ["o-syllabus__dismisser"],
+        "bodyClass": ["o-syllabus__body"]
       }
     </script>
 
-    <script type='x-vue-template' id='syllabus-modal'>
-      <syllabus-modal :cssClasses="cssClasses" :course="course" height="80%">
+    <script type='x-vue-template' id='syllabus'>
+      <syllabus :cssClasses="cssClasses" :course="course" height="80%">
         <template #caller>
           See Syllabus
         </template>
         <template #header="{ course }">
-          <div class='o-syllabus-modal__provider'>
+          <div class='o-syllabus__provider'>
             <span class='c-label'>
               <svg class='c-label__icon c-label__icon--circled-border'>
                 <use :xlink:href="course.providerLogo"></use>
@@ -131,19 +131,19 @@
           </div>
         </template>
         <template #body="{ course }">
-          <h5 class='o-syllabus-modal__course-name'>{{ course.name }}</h5>
-          <p class='o-syllabus-modal__course-description' v-html='course.description'></p>
-          <span class='o-syllabus-modal__course-syllabus-header'>
+          <h5 class='o-syllabus__course-name'>{{ course.name }}</h5>
+          <p class='o-syllabus__course-description' v-html='course.description'></p>
+          <span class='o-syllabus__course-syllabus-header'>
             Course syllabus
           </span>
-          <div class='o-syllabus-modal__course-syllabus' v-html='course.syllabus' v-bar></div>
+          <div class='o-syllabus__course-syllabus' v-html='course.syllabus' v-bar></div>
         </template>
-      </syllabus-modal>
+      </syllabus>
     </script>
 
     <div class="showcase">
       <h2>Syllabus Modal</h2>
-      <div data-vue-cpt='syllabus-modal'></div>
+      <div data-vue-cpt='syllabus'></div>
     </div>
 
     <script type="text/javascript" src="dist/blocks.all.js"></script>

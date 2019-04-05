@@ -1,7 +1,7 @@
 <template>
   <div :class='rootClass'>
     <div :class='callerClass'>
-      <a href='#' @click="openModal">
+      <a href='#' @click.prevent="openModal">
         <slot name="caller">Show Modal</slot>
       </a>
     </div>
