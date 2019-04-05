@@ -52,6 +52,7 @@ module.exports = envVars => {
       port: 8080,
       overlay: true,
       disableHostCheck: true,
+      writeToDisk: true,
       contentBase: outputPath,
       headers: {
         'Access-Control-Allow-Origin': '*'
@@ -112,7 +113,7 @@ module.exports = envVars => {
     },
     plugins: [
 
-      new CleanWebpackPlugin(['build']),
+      env.NODE_ENV === 'production' ? new CleanWebpackPlugin(['build']) : false,
 
       new VueLoaderPlugin(),
 
@@ -121,7 +122,7 @@ module.exports = envVars => {
         inject: false
       }),
 
-      env.NODE_ENV === 'production' && !env.SANDBOX_MODE ? new S3Uploader({
+      env.NODE_ENV === 'production' && env.RELEASE ? new S3Uploader({
         s3Options: {
           accessKeyId: env.AWS_ACCESS_KEY_ID,
           secretAccessKey: env.AWS_SECRET_ACCESS_KEY,
