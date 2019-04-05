@@ -4,17 +4,23 @@ import Mounter from './config/dom-listener'
 // Vendor
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
-const SocialSharing = require('vue-social-sharing');
-Vue.use(SocialSharing);
+
+const SocialSharing = require('vue-social-sharing')
+Vue.use(SocialSharing)
+
+import VModal from 'vue-js-modal'
+Vue.use(VModal)
 
 // Components
 import SearchBar from './vue/SearchBar.vue'
 import LocaleDropdown from './vue/LocaleDropdown.vue'
+import SyllabusModal from './vue/SyllabusModal.vue'
 
 Vue.component('search-bar', SearchBar)
 Vue.component('locale-dropdown', LocaleDropdown)
+Vue.component('syllabus-modal', SyllabusModal)
 
-Vue.use(VueAwesomeSwiper, { 
+Vue.use(VueAwesomeSwiper, {
   preventClicks: false,
   preventClicksPropagation: false,
   autoHeight: true,

@@ -9,7 +9,7 @@ const S3Uploader = require('webpack-s3-uploader')
 // SVGO Options
 const svgoSettings = require('./src/config/svgo-opts')
 
-// 
+//
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = envVars => {
@@ -26,7 +26,8 @@ module.exports = envVars => {
       'dist/blocks.all': './src/index.all.js',
       'dist/blocks/vue-awesome-swiper': './src/entries/vue-awesome-swiper.js',
       'dist/blocks/vue-search-bar': './src/entries/vue-search-bar.js',
-      'dist/blocks/vue-local-dropdown': './src/entries/vue-local-dropdown.js'
+      'dist/blocks/vue-local-dropdown': './src/entries/vue-local-dropdown.js',
+      'dist/blocks/vue-syllabus-modal': './src/entries/vue-syllabus-modal.js'
     },
 
     output: {
@@ -70,7 +71,7 @@ module.exports = envVars => {
               loader: 'style-loader'
             },
             {
-              loader: 'css-loader', options: { importLoaders: 1 } 
+              loader: 'css-loader', options: { importLoaders: 1 }
             },
             {
               loader: 'postcss-loader'
@@ -124,10 +125,10 @@ module.exports = envVars => {
         s3Options: {
           accessKeyId: env.AWS_ACCESS_KEY_ID,
           secretAccessKey: env.AWS_SECRET_ACCESS_KEY,
-          region: 'us-east-1' 
+          region: 'us-east-1'
         },
-        s3UploadOptions: { 
-          Bucket: 'quero-assets/blocks' 
+        s3UploadOptions: {
+          Bucket: 'quero-assets/blocks'
         }
       }) : false
 
