@@ -14,7 +14,7 @@
 
       <input
         type='text'
-        :style='inputStyle'
+        style='width:calc(100% - 61px)'
         :class='inputClass'
         :placeholder='placeholder'
         @blur='hideSuggestions'
@@ -107,7 +107,7 @@ export default {
   },
 
   mounted () {
-    this.inputStyle = {width: `calc(100% - ${this.$refs.action.getBoundingClientRect().width}px)` }
+    //this.inputStyle = {width: `calc(100% - ${this.$refs.action.getBoundingClientRect().width}px)` }
   },
 
   methods: {
